@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SURIYA ELECTRICAL - Admin</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- Login Page -->
+
+<div id="loginPage">
+
+<header>
+
+<h1>SURIYA ELECTRICAL</h1>
+
+<p>Admin Login</p>
+
+</header>
+
+<section>
+
+<div class="login-box">
+
+<h2>Admin Login</h2>
+
+<input
+type="email"
+id="adminName"
+placeholder="Enter Email">
+
+<input
+type="password"
+id="adminPassword"
+placeholder="Enter Password">
+
+<button onclick="adminLogin()">
+
+Login
+
+</button>
+
+</div>
+
+</section>
+
+</div>
+
+<!-- Dashboard -->
+
+<div id="dashboard" style="display:none;">
+  <!-- ==========================================
+     Part 4B
+     Admin Dashboard
+========================================== -->
+
+<header>
+
+<h1>SURIYA ELECTRICAL</h1>
+
+<p>Shop Owner Dashboard</p>
+
+</header>
+
+<section>
+
+<div class="dashboard-box">
+
+<h3>Total Products</h3>
+
+<h2 id="productCount">0</h2>
+
+</div>
+
+<div class="dashboard-box">
+
+<h3>Total Orders</h3>
+
+<h2 id="orderCount">0</h2>
+
+</div>
+
+<button onclick="logout()">
+
+Logout
+
+</button>
+
+</section>
+
+<hr>
+
+<section>
+
+<h2>Add New Product</h2>
+
+<input
+type="text"
+id="productName"
+placeholder="Product Name">
+
+<input
+type="number"
+id="productPrice"
+placeholder="Price">
+
+<input
+type="text"
+id="productImage"
+placeholder="Paste Product Image URL">
+
+<select id="productStock">
+
+<option value="true">
+
+In Stock
+
+</option>
+
+<option value="false">
+
+Out of Stock
+
+</option>
+
+</select>
+
+<button onclick="addProduct()">
+
+Add Product
+
+</button>
+
+</section>
+
+<hr>
+<!-- ==========================================
+     Part 4C
+     Product Search & Product List
+========================================== -->
+
+<section>
+
+<h2>Manage Products</h2>
+
+<input
+type="text"
+id="adminSearch"
+placeholder="Search Product">
+
+<div id="adminProducts">
+
+<!-- Products loaded from Firebase -->
+
+</div>
+
+</section>
+
+<hr>
+<!-- ==========================================
+     Part 4D
+     Customer Orders
+========================================== -->
+
+<section>
+
+<h2>Customer Orders</h2>
+
+<div id="orders">
+
+<!-- Orders loaded from Firebase -->
+
+</div>
+
+</section>
+
+<hr>
+<!-- ==========================================
+     Part 4E
+     Shop Information
+========================================== -->
+
+<section>
+
+<h2>SURIYA ELECTRICAL</h2>
+
+<p><strong>Business:</strong> Home Application Electrical Hardware</p>
+
+<p><strong>Address:</strong><br>
+679/6, Main Road,<br>
+Vickramasingapuram,<br>
+Tirunelveli District.</p>
+
+<p><strong>Phone:</strong> 9442878963</p>
+
+<p><strong>Working Hours:</strong> 9:00 AM – 8:00 PM</p>
+
+<p><strong>Holiday:</strong> Sunday</p>
+
+</section>
+
+<hr>
+<!-- ==========================================
+     Part 4F
+     Footer & Scripts
+========================================== -->
+
+<footer>
+
+<p>
+
+© 2026 SURIYA ELECTRICAL
+
+</p>
+
+</footer>
+
+</div>
+
+<script type="module" src="firebase.js"></script>
+
+<script type="module" src="admin.js"></script>
+
+</body>
+
+</html>
